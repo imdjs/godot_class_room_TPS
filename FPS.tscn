@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Label
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	pass
+
+func _process(_delta):
+	set_text(str(Engine.get_frames_per_second()))
+"
+
+[node name="FPS" type="Label"]
+margin_left = 1292.0
+margin_top = 831.0
+margin_right = 1365.0
+margin_bottom = 845.0
+rect_scale = Vector2( 4, 4 )
+align = 2
+valign = 1
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
